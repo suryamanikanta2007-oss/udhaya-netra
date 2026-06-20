@@ -1,0 +1,249 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Udhaya Netra Daily E-Paper</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f4f4;
+}
+
+/* LOGO */
+header{
+    width:100%;
+}
+
+.logo{
+    width:100%;
+    display:block;
+}
+
+/* MENU */
+nav{
+    background:#b30000;
+    padding:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+/* BREAKING NEWS */
+.breaking{
+    background:red;
+    color:white;
+    padding:10px;
+    font-weight:bold;
+}
+
+/* CONTENT */
+.container{
+    width:95%;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:20px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.card h2{
+    color:#b30000;
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.6;
+}
+
+/* PDF */
+iframe{
+    width:100%;
+    height:80vh;
+    border:none;
+}
+
+/* BUTTON */
+.download-btn{
+    display:inline-block;
+    background:#b30000;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:5px;
+    margin-top:15px;
+    border:none;
+    cursor:pointer;
+}
+
+.download-btn:hover{
+    background:#8a0000;
+}
+
+/* HIDE SECTIONS */
+#contactSection,
+#epaperSection{
+    display:none;
+}
+
+/* FOOTER */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    nav{
+        gap:15px;
+    }
+
+    nav a{
+        font-size:16px;
+    }
+
+    iframe{
+        height:60vh;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGO -->
+<header>
+<img src="https://uploads.onecompiler.io/44svhr8gs/44svhryga/WhatsApp%20Image%202026-06-20%20at%2011.39.07%20PM.jpeg"
+alt="Udhaya Netra Logo"
+class="logo">
+</header>
+
+<!-- MENU -->
+<nav>
+<a onclick="showHome()">Home</a>
+<a href="#">Latest News</a>
+<a onclick="showEPaper()">E-Paper</a>
+<a href="#">Archives</a>
+<a onclick="showContact()">Contact</a>
+</nav>
+
+<!-- BREAKING NEWS -->
+<div class="breaking">
+<marquee>
+WELCOME TO UDHAYA NETRA TELUGU DAILY NEWSPAPER
+</marquee>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<!-- HOME -->
+<div class="card" id="homeSection">
+<h2>Welcome to Udhaya Netra</h2>
+
+<p>
+Udhaya Netra Telugu Daily Newspaper brings you the latest
+District, State, National, Political, Sports, Business and
+Entertainment news every day.
+</p>
+</div>
+
+<!-- E-PAPER -->
+<div class="card" id="epaperSection">
+<h2>Today's E-Paper</h2>
+
+<iframe src="today.pdf"></iframe>
+
+<br><br>
+
+<a href="today.pdf" download class="download-btn">
+Download PDF
+</a>
+</div>
+
+<!-- CONTACT -->
+<div class="card" id="contactSection">
+
+<h2>Contact Us</h2>
+
+<p><strong>Newspaper:</strong> Udhaya Netra Telugu Daily</p>
+
+<p><strong>Editor:</strong> Kadali Pallaparaju</p>
+
+<p><strong>Phone:</strong> 9848556806</p>
+
+<p><strong>Email:</strong> kr2306258@gmail.com</p>
+
+<p><strong>Address:</strong> Amalapuram, Konaseema District,
+Andhra Pradesh - 533221</p>
+
+<button class="download-btn" onclick="showHome()">
+Close
+</button>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+© 2026 Udhaya Netra Telugu Daily Newspaper. All Rights Reserved.
+</footer>
+
+<script>
+
+function showHome(){
+    document.getElementById("homeSection").style.display="block";
+    document.getElementById("epaperSection").style.display="none";
+    document.getElementById("contactSection").style.display="none";
+}
+
+function showEPaper(){
+    document.getElementById("homeSection").style.display="none";
+    document.getElementById("epaperSection").style.display="block";
+    document.getElementById("contactSection").style.display="none";
+}
+
+function showContact(){
+    document.getElementById("homeSection").style.display="none";
+    document.getElementById("epaperSection").style.display="none";
+    document.getElementById("contactSection").style.display="block";
+}
+
+showHome();
+
+</script>
+
+</body>
+</html>
+```
